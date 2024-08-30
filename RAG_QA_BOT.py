@@ -4,7 +4,7 @@ from pinecone import Pinecone, ServerlessSpec
 import tensorflow as tf
 
 # Load the text file containing business data
-with open('C:\\Users\\saani\\Downloads\\data.txt', 'r') as f:
+with open('data.txt', 'r') as f:
     data = f.read()
 
 # Initialize the model and tokenizer
@@ -13,7 +13,7 @@ model = TFAutoModelForSeq2SeqLM.from_pretrained('t5-base')
 
 # Initialize the Pinecone client with the new method
 try:
-    pc = Pinecone(api_key='bbe34f88-313c-453a-8a49-30a704c715f6')
+    pc = Pinecone(api_key='key')
 except Exception as e:
     print(f"Error initializing Pinecone client: {e}")
     exit(1)
